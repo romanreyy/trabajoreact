@@ -12,7 +12,9 @@ export default function Main() {
     return (
         <div>
             <nav>
-                <Icon/>
+                <Link to="/">
+                    <Icon/>
+                </Link>
                 <br/>
                 <hr/>
                 <SearchBar/>

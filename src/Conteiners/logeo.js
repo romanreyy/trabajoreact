@@ -1,17 +1,39 @@
+import {Link} from "react-router-dom";
+import {Icon} from "../components/icon";
+import {SearchBar} from "../components/search_bar";
+import {ButtonCreate} from "../components/create_post";
+import {Login} from "../components/login";
+import React from "react";
+
 export default function LogIn (){
         return (
             <div className="logeo"
                  style={{
-                     margin: "0 auto",
+                     /*margin: "0 auto",
                      display: "flex",
                      flexDirection: "column",
                      justifyContent: "center",
                      alignItems: "center",
                      width:"500px",
                      height: "1230px",
-                     placeItems: "center"
+                     placeItems: "center"*/
                  }}
             >
+                <nav>
+                    <Link to="/">
+                        <Icon/>
+                    </Link>
+                    <br/>
+                    <hr/>
+                    <SearchBar/>
+                    <Link to="/CreatePost">
+                        <ButtonCreate/>
+                    </Link>
+                    <Link to="/LogIn">
+                        <Login/>
+                    </Link>
+                    <hr/>
+                </nav>
                 <h1
                     style={{
                         margin: "0 auto",
