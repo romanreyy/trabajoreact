@@ -1,41 +1,16 @@
 import React from "react";
-import '../App.css';
-import {SearchBar} from '../components/search_bar';
-import {Icon} from '../components/icon';
-import {ButtonCreate} from '../components/create_post';
-import {Login} from '../components/login';
-import {Posts} from '../components/posts';
-
-
+import Main from "./Main.js";
+import CreatePost from "./Do_Post.js";
+import LogIn from './logeo';
+import { Routes, Route } from "react-router-dom";
 export default function App() {
     return (
             <div>
-                <nav>
-                        <Icon/>
-                        <br/>
-                        <hr/>
-                        <SearchBar/>
-                        <ButtonCreate/>
-                        <Login/>
-                        <hr/>
-                </nav>
-                <div
-                    style={{
-                        width: "100px",
-                        margin: "0 auto",
-                        padding: "50px"
-                    }}
-                >
-                    <Posts/>
-                    <Posts/>
-                    <Posts/>
-                    <Posts/>
-                    <Posts/>
-                    <Posts/>
-                    <Posts/>
-
-                </div>
-                
+                <Routes>
+                    <Route path="/" element={<Main />} />
+                    <Route exact path="/CreatePost" element={<CreatePost />} />
+                    <Route exact path="/LogIn" element={<LogIn />} />
+                </Routes>
             </div>
 
         );
