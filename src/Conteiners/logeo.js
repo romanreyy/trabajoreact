@@ -1,6 +1,6 @@
 export default function LogIn (){
         return (
-            <div class="logeo"
+            <div className="logeo"
                  style={{
                      margin: "0 auto",
                      display: "flex",
