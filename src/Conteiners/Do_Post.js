@@ -22,13 +22,40 @@ export default function CreatePost (){
                     </Link>
                     <hr/>
                 </nav>
-                <h1>Crea tu Post</h1>
-                <br/>
-                <input type="text" placeholder="Titulo"/>
-                <br/>
-                <textarea/>
-                <br/>
-                <input type="submit" value="Postear"/>
+                    <form
+                        style={{
+                            margin: "0 auto",
+                            display: "flex",
+                            flexDirection: "column",
+                            justifyContent: "center",
+                            alignItems: "center",
+                        }}
+                    >
+                    <h1>Crea tu Post</h1>
+                    <br/>
+                    <input type="text" placeholder="Titulo"
+                        style={{
+                            height: "40px",
+                            width: "300px",
+                            fontSize: "18px"
+                        }}
+                    />
+                    <br/>
+                    <textarea
+                        style={{
+                            height: "200px",
+                            width: "500px",
+                            fontSize: "14px"
+                        }}
+                    />
+                    <br/>
+                    <input type="submit" value="Postear"
+                           style={{
+                               height: "40px",
+                               width: "100px"
+                           }}
+                    />
+                    </form>
             </div>
     );
 }

@@ -1,15 +1,16 @@
+
 export function Posts() {
     return (
         <div
             style={{
-                display: "inline-block",
-                flexDirection: "column",
-                justifyContent: "center",
-                alignItems: "center",
                 width: "300px",
                 height: "auto ",
                 background: "transparent",
-                margin:"5px",
+                margin: "0 auto",
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center",
+                alignItems: "center",
                 borderStyle: "solid"
             }}
         >

@@ -28,19 +28,16 @@ export default function Main() {
             </nav>
             <div
                 style={{
-                    width: "100px",
-                    margin: "0 auto",
-                    padding: "50px"
+                    padding: "20px"
                 }}
             >
-                <Posts/>
-                <Posts/>
-                <Posts/>
-                <Posts/>
-                <Posts/>
-                <Posts/>
-                <Posts/>
-
+                    <Posts/>
+                    <Posts/>
+                    <Posts/>
+                    <Posts/>
+                    <Posts/>
+                    <Posts/>
+                    <Posts/>
             </div>
 
         </div>
