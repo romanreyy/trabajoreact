@@ -2,7 +2,7 @@ import React from "react";
 
 export function SearchBar () {
     return(
-        < input type="text"
+        <input type="text"
             style={{
                 width: "500px",
                 height: "30px",
@@ -13,5 +13,6 @@ export function SearchBar () {
                 justifyContent: "center",
                 alignItems: "center"
             }}/>
+
     );
 }

@@ -9,7 +9,7 @@ export function Icon (){
                     style={{
                         width: "80px",
                         cursor: "pointer",
-                        backgroundColor: "transparent",
+                        backgroundColor: "transparent"
                  }}
                 />
             </button>
