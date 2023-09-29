@@ -7,18 +7,7 @@ import React from "react";
 
 export default function LogIn (){
         return (
-            <div className="logeo"
-                 style={{
-                     /*margin: "0 auto",
-                     display: "flex",
-                     flexDirection: "column",
-                     justifyContent: "center",
-                     alignItems: "center",
-                     width:"500px",
-                     height: "1230px",
-                     placeItems: "center"*/
-                 }}
-            >
+            <div className="logeo">
                 <nav>
                     <Link to="/">
                         <Icon/>
