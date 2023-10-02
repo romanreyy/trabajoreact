@@ -5,31 +5,6 @@ import {SearchBar} from "../components/search_bar";
 import {ButtonCreate} from "../components/create_post";
 import {Login} from "../components/login";
 export default function CreatePost (){
-    const [formData, setFormData] = useState({
-        inputText: '',
-        textArea: ''
-    });
-    const [dataList, setDataList] = useState(() => {
-        const savedData = localStorage.getItem('formData');
-        return savedData ? JSON.parse(savedData) : [];
-    });
-
-    useEffect(() => {
-        localStorage.setItem('formData', JSON.stringify(dataList));
-    }, [dataList]);
-
-    const handleInputChange = (e) => {
-        const { name, value } = e.target;
-        setFormData({ ...formData, [name]: value });
-    };
-
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        const newData = { ...formData };
-        setDataList([...dataList, newData]);
-        setFormData({ inputText: '', textArea: '' });
-    };
-
         return (
             <div>
                 <nav>
@@ -47,7 +22,7 @@ export default function CreatePost (){
                     </Link>
                     <hr/>
                 </nav>
-                <form onSubmit={handleSubmit}
+                <form
                       style={{
                           margin: "0 auto",
                           display: "flex",
@@ -61,8 +36,6 @@ export default function CreatePost (){
                     <input
                         type="text"
                         name="inputText"
-                        value={formData.inputText}
-                        onChange={handleInputChange}
                         placeholder="Input Text"
                         style={{
                             height: "40px",
@@ -74,9 +47,6 @@ export default function CreatePost (){
                     <textarea
                         name="textArea"
                         placeholder="Posteo"
-                        value={formData.textArea}
-                        onChange={handleInputChange}
-
                         style={{
                             height: "200px",
                             width: "500px",
