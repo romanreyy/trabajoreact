@@ -6,7 +6,7 @@ import {ButtonCreate} from '../components/create_post';
 import {Login} from '../components/login';
 import {Posts} from '../components/posts';
 import {Link} from "react-router-dom";
-import CreatePost from './containers/Do_Post';
+import CreatePost from './Do_Post';
 
 
 export default function Main() {
