@@ -1,10 +1,31 @@
-//import React, {useState, useEffect} from "react";
+import React, {useState} from "react";
 import {Link} from "react-router-dom";
 import {Icon} from "../components/icon";
 import {SearchBar} from "../components/search_bar";
 import {ButtonCreate} from "../components/create_post";
 import {Login} from "../components/login";
-export default function CreatePost (){
+
+
+export default function CreatePost ({onFormSubmit}){
+
+    const [formData, setFormData] = useState({
+        titulo: '',
+        contenido: '',
+      });
+
+      const handleInputChange = (event) => {
+        const { name, value } = event.target;
+        setFormData({
+          ...formData,
+          [name]: value,
+        });
+      };
+
+      const handleSubmit = (event) => {
+        event.preventDefault();
+        onFormSubmit(formData);
+      };
+    
         return (
             <div>
                 <nav>
@@ -35,8 +56,11 @@ export default function CreatePost (){
                     <br/>
                     <input
                         type="text"
-                        name="inputText"
+                        name="titulo"
                         placeholder="Input Text"
+                        value={formData.titulo}
+                        onChange={handleInputChange}
+
                         style={{
                             height: "40px",
                             width: "300px",
@@ -45,8 +69,11 @@ export default function CreatePost (){
                     />
                     <br/>
                     <textarea
-                        name="textArea"
+                        name="Contenido"
                         placeholder="Posteo"
+                        value={formData.contenido}
+                        onChange={handleInputChange}
+
                         style={{
                             height: "200px",
                             width: "500px",
@@ -54,12 +81,14 @@ export default function CreatePost (){
                         }}
                     />
                     <br/>
-                    <button type="submit" value="Postear"
+                    <button type="submit"
                            style={{
                                height: "40px",
                                width: "100px"
                            }}
-                    />
+                    >
+                        Postear
+                    </button>
                 </form>
             </div>
         );

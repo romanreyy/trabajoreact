@@ -6,9 +6,17 @@ import {ButtonCreate} from '../components/create_post';
 import {Login} from '../components/login';
 import {Posts} from '../components/posts';
 import {Link} from "react-router-dom";
+import CreatePost from './containers/Do_Post';
 
 
 export default function Main() {
+
+    const [datos, setDatos] = useState([]);
+
+  const handleFormSubmit = (formData) => {
+    setDatos([...datos, formData]);
+  };
+
     return (
         <div>
             <nav>
@@ -31,6 +39,7 @@ export default function Main() {
                     padding: "20px"
                 }}
             >
+                    <CreatePost onFormSubmit={handleFormSubmit} />
                     <Posts/>
                     <Posts/>
                     <Posts/>
