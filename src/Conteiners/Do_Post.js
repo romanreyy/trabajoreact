@@ -43,7 +43,7 @@ export default function CreatePost ({onFormSubmit}){
                     </Link>
                     <hr/>
                 </nav>
-                <form
+                <form onSubmit={handleSubmit}
                       style={{
                           margin: "0 auto",
                           display: "flex",
