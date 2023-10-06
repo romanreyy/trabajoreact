@@ -3,7 +3,7 @@ import Main from "./Main.js";
 import CreatePost from "./Do_Post.js";
 import LogIn from './logeo';
 import CreateAccount from './NewAccount';
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Link} from "react-router-dom";
 import {Icon} from "../components/icon";
 import {SearchBar} from "../components/search_bar";
 import {ButtonCreate} from "../components/create_post";
