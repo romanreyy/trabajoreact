@@ -1,15 +1,11 @@
 import React from "react";
 import '../App.css';
-import {Posts} from '../components/posts';
+import {Posts} from '../components/Posts';
 
 export default function Main() {
     return (
         <div>
-            <div
-                style={{
-                    padding: "20px"
-                }}
-            >
+            <div className="showPosts">
                     <Posts/>
                     <Posts/>
                     <Posts/>

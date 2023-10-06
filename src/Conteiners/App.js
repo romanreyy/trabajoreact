@@ -1,13 +1,13 @@
 import React from "react";
 import Main from "./Main.js";
-import CreatePost from "./Do_Post.js";
-import LogIn from './logeo';
+import CreatePost from "./CreatePost.js";
+import LogIn from './LogIn';
 import CreateAccount from './NewAccount';
 import {Routes, Route, Link} from "react-router-dom";
-import {Icon} from "../components/icon";
-import {SearchBar} from "../components/search_bar";
-import {ButtonCreate} from "../components/create_post";
-import {Login} from "../components/login";
+import {Icon} from "../components/Icon";
+import {SearchBar} from "../components/SearchBar";
+import {ButtonCreate} from "../components/ButtonCreate";
+import {ButtonLogIn} from "../components/ButtonLogIn";
 export default function App() {
     return (
             <div>
@@ -22,7 +22,7 @@ export default function App() {
                         <ButtonCreate/>
                     </Link>
                     <Link to="/LogIn">
-                        <Login/>
+                        <ButtonLogIn/>
                     </Link>
                     <hr/>
                 </nav>
@@ -30,7 +30,7 @@ export default function App() {
                     <Route path="/" element={<Main />} />
                     <Route exact path="/CreatePost" element={<CreatePost />} />
                     <Route exact path="/LogIn" element={<LogIn />} />
-                    <Route exact path="/CrearCuenta" element={<CreateAccount />} />
+                    <Route exact path="/CreateAccount" element={<CreateAccount />} />
                 </Routes>
             </div>
 

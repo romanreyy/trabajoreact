@@ -1,18 +1,6 @@
 export function Posts() {
         return (
-            <div
-                style={{
-                    width: "500px",
-                    height: "auto",
-                    margin: "0 auto",
-                    display: "flex",
-                    flexDirection: "column",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    borderStyle: "solid",
-                    marginTop: "20px"
-                }}
-            >
+            <div className="posts">
                 <h1> Hola Boca</h1>
                 <p>
                     Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha

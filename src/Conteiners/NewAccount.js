@@ -1,58 +1,16 @@
 import React from "react";
-
 export default function CreateAccount () {
     return(
         <div>
             <form>
-                <h1
-                    style={{
-                        margin: "0 auto",
-                        display: "flex",
-                        flexDirection: "column",
-                        justifyContent: "center",
-                        alignItems: "center"
-                    }}
-                >
+                <h1 className="titleNewAccount">
                     Crear Usuario hola
                 </h1>
-                <input type="text" placeholder="nombre de usuario"
-                       style={{
-                           width: "200px",
-                           height: "30px",
-                           fontSize: "18px",
-                           margin: "0 auto",
-                           display: "flex",
-                           flexDirection: "column",
-                           justifyContent: "center",
-                           alignItems: "center"
-                       }}
-                />
+                <input className="inputUser" type="text" placeholder="nombre de usuario"/>
                 <br/>
-                <input type="password" placeholder="contraseña"
-                       style={{
-                           width: "200px",
-                           height: "30px",
-                           fontSize: "18px",
-                           margin: "0 auto",
-                           display: "flex",
-                           flexDirection: "column",
-                           justifyContent: "center",
-                           alignItems: "center"
-                       }}
-                />
+                <input className="inputUser" type="password" placeholder="contraseña"/>
                 <br/>
-                <input type="submit" value="crear usuario"
-                       style={{
-                           width: "200px",
-                           height: "30px",
-                           fontSize: "18px",
-                           margin: "0 auto",
-                           display: "flex",
-                           flexDirection: "column",
-                           justifyContent: "center",
-                           alignItems: "center"
-                       }}
-                />
+                <input className="inputUser" type="submit" value="crear usuario"/>
             </form>
         </div>
     );
