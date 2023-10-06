@@ -2,7 +2,7 @@ import React from "react";
 export default function CreatePost (){
         return (
             <div>
-                <form onSave={handleSubmit}
+                <form
                       style={{
                           margin: "0 auto",
                           display: "flex",
