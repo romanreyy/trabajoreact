@@ -13,7 +13,7 @@ export default function CreateAccount () {
                         alignItems: "center"
                     }}
                 >
-                    Crear Usuario nuevo
+                    Crear Usuario
                 </h1>
                 <input type="text" placeholder="nombre de usuario"
                        style={{
