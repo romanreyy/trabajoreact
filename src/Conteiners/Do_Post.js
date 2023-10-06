@@ -1,49 +1,9 @@
-import React, {useState} from "react";
-import {Link} from "react-router-dom";
-import {Icon} from "../components/icon";
-import {SearchBar} from "../components/search_bar";
-import {ButtonCreate} from "../components/create_post";
-import {Login} from "../components/login";
+import React from "react";
 
-
-export default function CreatePost ({onFormSubmit}){
-
-    const [formData, setFormData] = useState({
-        titulo: '',
-        contenido: '',
-      });
-
-      const handleInputChange = (event) => {
-        const { name, value } = event.target;
-        setFormData({
-          ...formData,
-          [name]: value,
-        });
-      };
-
-      const handleSubmit = (event) => {
-        event.preventDefault();
-        onFormSubmit(formData);
-      };
-    
+export default function CreatePost (){
         return (
             <div>
-                <nav>
-                    <Link to="/">
-                        <Icon/>
-                    </Link>
-                    <br/>
-                    <hr/>
-                    <SearchBar/>
-                    <Link to="/CreatePost">
-                        <ButtonCreate/>
-                    </Link>
-                    <Link to="/LogIn">
-                        <Login/>
-                    </Link>
-                    <hr/>
-                </nav>
-                <form onSubmit={handleSubmit}
+                <form
                       style={{
                           margin: "0 auto",
                           display: "flex",
@@ -58,8 +18,6 @@ export default function CreatePost ({onFormSubmit}){
                         type="text"
                         name="titulo"
                         placeholder="Input Text"
-                        value={formData.titulo}
-                        onChange={handleInputChange}
 
                         style={{
                             height: "40px",
@@ -70,9 +28,7 @@ export default function CreatePost ({onFormSubmit}){
                     <br/>
                     <textarea
                         name="Contenido"
-                        placeholder="Posteo"
-                        value={formData.contenido}
-                        onChange={handleInputChange}
+                        placeholder="Escribe Markdown"
 
                         style={{
                             height: "200px",

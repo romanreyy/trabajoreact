@@ -10,7 +10,6 @@ export default function Main() {
                     padding: "20px"
                 }}
             >
-                    <CreatePost onFormSubmit={handleFormSubmit} />
                     <Posts/>
                     <Posts/>
                     <Posts/>
