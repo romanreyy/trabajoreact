@@ -1,53 +1,8 @@
-import React, {useState, useEffect} from "react";
-import {Link} from "react-router-dom";
-import {Icon} from "../components/icon";
-import {SearchBar} from "../components/search_bar";
-import {ButtonCreate} from "../components/create_post";
-import {Login} from "../components/login";
+import React from "react";
 export default function CreatePost (){
-    const [formData, setFormData] = useState({
-        inputText: '',
-        textArea: ''
-    });
-    const [dataList, setDataList] = useState(() => {
-        const savedData = localStorage.getItem('formData');
-        return savedData ? JSON.parse(savedData) : [];
-    });
-
-    useEffect(() => {
-        localStorage.setItem('formData', JSON.stringify(dataList));
-    }, [dataList]);
-
-    const handleInputChange = (e) => {
-        const { name, value } = e.target;
-        setFormData({ ...formData, [name]: value });
-    };
-
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        const newData = { ...formData };
-        setDataList([...dataList, newData]);
-        setFormData({ inputText: '', textArea: '' });
-    };
-
         return (
             <div>
-                <nav>
-                    <Link to="/">
-                        <Icon/>
-                    </Link>
-                    <br/>
-                    <hr/>
-                    <SearchBar/>
-                    <Link to="/CreatePost">
-                        <ButtonCreate/>
-                    </Link>
-                    <Link to="/LogIn">
-                        <Login/>
-                    </Link>
-                    <hr/>
-                </nav>
-                <form onSubmit={handleSubmit}
+                <form onSave={handleSubmit}
                       style={{
                           margin: "0 auto",
                           display: "flex",
@@ -60,10 +15,8 @@ export default function CreatePost (){
                     <br/>
                     <input
                         type="text"
-                        name="inputText"
-                        value={formData.inputText}
-                        onChange={handleInputChange}
-                        placeholder="Input Text"
+                        name="titulo"
+                        placeholder="titulo"
                         style={{
                             height: "40px",
                             width: "300px",
@@ -73,9 +26,7 @@ export default function CreatePost (){
                     <br/>
                     <textarea
                         name="textArea"
-                        placeholder="Posteo"
-                        value={formData.textArea}
-                        onChange={handleInputChange}
+                        placeholder="Contenido"
 
                         style={{
                             height: "200px",

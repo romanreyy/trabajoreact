@@ -1,28 +1,9 @@
 import {Link} from "react-router-dom";
-import {Icon} from "../components/icon";
-import {SearchBar} from "../components/search_bar";
-import {ButtonCreate} from "../components/create_post";
-import {Login} from "../components/login";
 import React from "react";
 
 export default function LogIn (){
         return (
             <div className="logeo">
-                <nav>
-                    <Link to="/">
-                        <Icon/>
-                    </Link>
-                    <br/>
-                    <hr/>
-                    <SearchBar/>
-                    <Link to="/CreatePost">
-                        <ButtonCreate/>
-                    </Link>
-                    <Link to="/LogIn">
-                        <Login/>
-                    </Link>
-                    <hr/>
-                </nav>
                 <form>
                     <h1
                         style={{
