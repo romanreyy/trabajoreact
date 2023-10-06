@@ -1,8 +1,15 @@
-import React from "react";
+import React, {useState} from "react";
 export default function CreatePost (){
+    const  [title, setText] = useState([]);
+    const handleAddPost = () => {
+        const newTitle = {
+            titulo: ""
+        }
+        setText([...title, newTitle])
+    };
         return (
             <div>
-                <form
+                <form onSubmit={handleAddPost}
                       style={{
                           margin: "0 auto",
                           display: "flex",
@@ -17,6 +24,7 @@ export default function CreatePost (){
                         type="text"
                         name="titulo"
                         placeholder="titulo"
+                        onChange={handleAddPost}
                         style={{
                             height: "40px",
                             width: "300px",
@@ -35,13 +43,21 @@ export default function CreatePost (){
                         }}
                     />
                     <br/>
-                    <button type="submit" value="Postear"
+                    <button onSubmit={handleAddPost} type="submit" value="Postear"
                            style={{
                                height: "40px",
                                width: "100px"
                            }}
-                    />
+                    >
+                        postear
+                    </button>
                 </form>
+
+                <ul>
+                    {title.map((title) => (
+                        <li key={title.titulo}>{title.titulo}</li>
+                    ))}
+                </ul>
             </div>
         );
     }
