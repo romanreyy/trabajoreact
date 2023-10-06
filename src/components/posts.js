@@ -1,6 +1,4 @@
-import {useData} from "./DataContext";
 export function Posts() {
-        const {dataList} = useData();
         return (
             <div
                 style={{
@@ -27,14 +25,6 @@ export function Posts() {
                     software de autoedición, como por ejemplo Aldus PageMaker,
                     el cual incluye versiones de Lorem Ipsum.
                 </p>
-                <h2>Datos Guardados:</h2>
-                <ul>
-                    {dataList.map((data, index) => (
-                        <li key={index}>
-                            Input Text: {data.inputText}, Text Area: {data.textArea}
-                        </li>
-                    ))}
-                </ul>
             </div>
 
         );
