@@ -1,5 +1,4 @@
 import React, {useState} from "react";
-import {PostDomain} from "../Domain/Post";
 
 export default function CreatePost ({onPostCreated}){
     const [postText, setPostText] = useState("");
@@ -13,14 +12,14 @@ export default function CreatePost ({onPostCreated}){
 //     setPostText("");
 //   };
 
-  const getCurrentDate = () => {
-    const today = new Date();
-    const day = String(today.getDate()).padStart(2, "0");
-    const month = String(today.getMonth() + 1).padStart(2, "0"); // El mes es devuelto de 0 a 11, por lo que necesitas sumar 1
-    const year = today.getFullYear();
+ // const getCurrentDate = () => {
+   // const today = new Date();
+    //const day = String(today.getDate()).padStart(2, "0");
+    //const month = String(today.getMonth() + 1).padStart(2, "0"); // El mes es devuelto de 0 a 11, por lo que necesitas sumar 1
+    //const year = today.getFullYear();
   
-    return `${day}/${month}/${year}`;
-  };
+    //return `${day}/${month}/${year}`;
+  //};
         return (
             <div>
                 <form className="createPost">
