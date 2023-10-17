@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import '../App.css';
 import {Posts} from '../components/Posts';
 import {PostDomain} from "../Domain/Post";

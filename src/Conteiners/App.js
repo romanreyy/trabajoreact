@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import Main from "./Main.js";
 import CreatePost from "./CreatePost.js";
 import LogIn from './LogIn';
