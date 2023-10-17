@@ -4,7 +4,7 @@ import {Posts} from '../components/Posts';
 import {PostDomain} from "../Domain/Post";
 
 export default function Main() {
-    const [postList, setPostList] = useState(getPost());
+    const [postList] = useState(getPost());
 
     return (
         <div>

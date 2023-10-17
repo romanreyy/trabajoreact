@@ -4,14 +4,14 @@ import {PostDomain} from "../Domain/Post";
 export default function CreatePost ({onPostCreated}){
     const [postText, setPostText] = useState("");
 
-  const handlePostSubmit = (e) => {
-    e.preventDefault();
-    // Crear una nueva publicación con el contenido y la fecha actual
-    const newPost = new PostDomain(postText, "Contenido del nuevo post", getCurrentDate());
-    onPostCreated(newPost);
-    // Limpiar el área de texto después de crear el post
-    setPostText("");
-  };
+//   const handlePostSubmit = (e) => {
+//     e.preventDefault();
+//     // Crear una nueva publicación con el contenido y la fecha actual
+//     const newPost = new PostDomain(postText, "Contenido del nuevo post", getCurrentDate());
+//     onPostCreated(newPost);
+//     // Limpiar el área de texto después de crear el post
+//     setPostText("");
+//   };
 
   const getCurrentDate = () => {
     const today = new Date();
