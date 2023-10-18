@@ -10,4 +10,5 @@ export function Posts({post}) {
                 </p>
             </div>
         );
-    }
+}
+

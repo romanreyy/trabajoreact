@@ -1,6 +1,6 @@
 import React from "react";
 export default function CreatePost (){
-        return (
+    return (
             <div>
                 <form className="createPost">
                     <h1>Crea tu Post</h1>
