@@ -8,6 +8,7 @@ import {Icon} from "../components/Icon";
 import {SearchBar} from "../components/SearchBar";
 import {ButtonCreate} from "../components/ButtonCreate";
 import {ButtonLogIn} from "../components/ButtonLogIn";
+
 export default function App() {
     return (
             <div>
@@ -31,6 +32,7 @@ export default function App() {
                     <Route exact path="/CreatePost" element={<CreatePost />} />
                     <Route exact path="/LogIn" element={<LogIn />} />
                     <Route exact path="/CreateAccount" element={<CreateAccount />} />
+                   
                 </Routes>
             </div>
 
