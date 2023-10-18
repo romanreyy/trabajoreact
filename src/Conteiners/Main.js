@@ -4,16 +4,15 @@ import {Posts} from '../components/Posts';
 import {PostDomain} from "../Domain/Post";
 
 export default function Main() {
-    const [postList] = useState(getPost());
 
     return (
         <div>
             <div className="showPosts">
-                {postList.map((object, i) => (
-                <Posts key={i} post={object} />
-            ))}
+                {postList.map((object, i) => <Posts post={object}/>)}
             </div>
-
+            {posteos.map(posteos => (
+                <div className="posts" key={posteos.id}>{posteos.title} {posteos.description}</div>
+            ))}
         </div>
 
     );
