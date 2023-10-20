@@ -31,7 +31,7 @@ export default function DetailPost() {
 
 const getPost = (id) => {
     return findPosts().filter(post =>{
-        return (post.id == id);
+        return (post.id.toString() === id.toString());
     })[0];
 }
 

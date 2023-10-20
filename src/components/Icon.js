@@ -1,6 +1,6 @@
 import React from "react";
 
-export function Icon (){
+export function Icon () {
     return(
         <>
             <button>
@@ -10,8 +10,6 @@ export function Icon (){
                     alt="button"
                 />
             </button>
-
         </>
     );
-    
 }
