@@ -17,46 +17,9 @@
   width: 100px;
 }
 
-.titleLogIn {
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.inputUser {
-  width: 200px;
-  height: 30px;
-  font-size: 18px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.createUser {
-  width: 200px;
-  height: 30px;
-  font-size: 15px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
 
 .showPosts {
   padding: 20px;
-}
-
-.titleNewAccount {
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
 .searchBar {
@@ -87,13 +50,6 @@
   background-color: transparent;
 }
 
-.buttonLogIn {
-  position: absolute;
-  top: 100px;
-  right: 100px;
-  width: 100px;
-  height: 50px;
-}
 
 .buttonCreate {
   position: absolute;
@@ -101,4 +57,52 @@
   top: 100px;
   width: 100px;
   height: 50px;
+}
+
+.createComment {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.showComments {
+  width: 500px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-style: solid;
+  margin: 20px auto 0;
+}
+
+.postear {
+  height: 40px;
+  width: 150px;
+}
+
+.comments {
+  width: 500px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-style: solid;
+  margin: 20px auto 0;
+}
+
+.buttonComment {
+  height: 40px;
+  width: 150px;
+}
+
+.formComment {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

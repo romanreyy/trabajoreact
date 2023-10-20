@@ -1,23 +1,33 @@
 import React from "react";
-export default function CreatePost (){
+import { useState } from 'react';
+import { createPost } from "./Main";
+
+export default function CreatePost () {
+    const [post, setPost] = useState('');
+    function handleSubmit(e){
+        e.preventDefault();
+        createPost(post);
+        setPost('');
+    }
+
     return (
             <div>
-                <form className="createPost">
+                <form className="createPost" onSubmit={handleSubmit}>
                     <h1>Crea tu Post</h1>
                     <br/>
                     <textarea
                         className="textArea"
                         name="textArea"
                         placeholder="Escribe Markdown"
+                        value={post}
+                        onChange={event => {setPost(event.target.value);}}
                     />
                     <br/>
-                    <button
+                    <input
                         className="posting"
                         type="submit"
-                        value="Postear"
-                    >
-                        Postear
-                    </button>
+                        value="postear"
+                    />
                 </form>
             </div>
         );

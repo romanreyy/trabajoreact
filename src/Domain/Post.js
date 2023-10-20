@@ -1,7 +1,6 @@
 export class PostDomain {
-    constructor(title, description, date) {
+    constructor(title) {
+        this.id = Math.random();
         this.title=title;
-        this.description=description;
-        this.date=date;
     }
 }
