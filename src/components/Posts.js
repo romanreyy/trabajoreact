@@ -6,7 +6,7 @@ export function Posts({post}) {
     return (
         <div className="posts">
             <Markdown remarkPlugins={[remarkGfm]}>{post.title.slice(0, 25)}</Markdown>
-            <Link to={`/DetailPost/${post.id}`} ><button>Ver Más</button></Link>
+            <Link to={`/DetailPost/${post.id}`} ><button className="buttonViewMore">Ver Más</button></Link>
         </div>
     );
 }

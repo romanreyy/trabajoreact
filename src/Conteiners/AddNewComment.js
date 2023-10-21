@@ -12,7 +12,7 @@ export default function CreateComment () {
     }
 
     return (
-        <div>
+        <div className="main">
             <form onSubmit={handleSubmit} className="formComment">
                 <textarea
                     type="text"

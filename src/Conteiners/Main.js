@@ -4,7 +4,7 @@ import {PostDomain} from "../Domain/Post";
 export default function Main() {
     const postList = getPost()
     return (
-        <div>
+        <div className="main">
             <div className="showPosts">
                 {postList.map((object, i) => <Posts post={object}/>)}
             </div>

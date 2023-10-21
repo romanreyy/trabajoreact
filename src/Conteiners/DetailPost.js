@@ -12,15 +12,16 @@ export default function DetailPost() {
     const comments = getComment(id);
 
     return (
-        <div>
+        <div className="main">
             <div className="posts">
                 <Markdown remarkPlugins={[remarkGfm]}>{post.title}</Markdown>
             </div>
-            <div className="comments">
+            <hr/>
+            <div className="conteinerShowPost">
                 <div>
                     <h2>Comentarios:</h2>
                 </div>
-                <Link to={`/DetailPost/${id}/Comment`}><button className="buttonComment">Comente lo que piensa sobre el post</button></Link>
+                <Link to={`/DetailPost/${id}/Comment`}><button className="buttonComment">agregar comentario</button></Link>
                 <div>
                     {comments.map((object, i) => <ShowComments comment={object}/>)}
                 </div>

@@ -11,7 +11,7 @@ export default function CreatePost () {
     }
 
     return (
-            <div>
+            <div className="main">
                 <form className="createPost" onSubmit={handleSubmit}>
                     <h1>Crea tu Post</h1>
                     <br/>
